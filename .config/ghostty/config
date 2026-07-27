@@ -1,0 +1,14 @@
+cursor-style = block
+shell-integration-features = no-cursor
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
+term=xterm-256color
+macos-titlebar-style = tabs
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+window-padding-x = 10
+window-padding-y = 10
+# window-decoration = none
+confirm-close-surface = false
+copy-on-select = clipboard
+mouse-shift-capture = false
+mouse-hide-while-typing = true
