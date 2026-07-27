@@ -1,0 +1,7 @@
+alias ga="git add"
+alias gs="git status"
+alias gc="git commit"
+alias gch="git checkout"
+alias gp="git push origin"
+alias gr="git pull --rebase origin"
+alias gb="git branch"
