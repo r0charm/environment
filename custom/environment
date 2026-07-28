@@ -1,0 +1,2 @@
+# SSH_ENV="$HOME/.ssh/agent-environment"
+export EDITOR=vim
