@@ -12,3 +12,7 @@ confirm-close-surface = false
 copy-on-select = clipboard
 mouse-shift-capture = false
 mouse-hide-while-typing = true
+
+# Splits: visible divider, dim the inactive side
+split-divider-color = #f9e2af
+unfocused-split-opacity = 0.85
