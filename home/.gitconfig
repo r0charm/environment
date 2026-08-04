@@ -1,0 +1,21 @@
+[user]
+    email = user.email
+    name = user.name
+[pull]
+    ff = only
+[rerere]
+    enabled = true
+[alias]
+    change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+[protocol "file"]
+    allow = always
+[pager]
+    diff = false
+[diff]
+    # external = difft
+[credential "https://github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential

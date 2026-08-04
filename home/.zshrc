@@ -10,8 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="alanpeabody"
 
-export EDITOR=vim
-export VISUAL=vim
+typeset -U path  # drop duplicate $PATH entries
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,4 +111,8 @@ setopt NO_BEEP
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-for f in ~/dotfiles/custom/*; do source $f; done
+source ~/.profile
+source ~/dotfiles/custom/git
+source ~/dotfiles/custom/nvm
+source ~/dotfiles/custom/prompt
+source ~/dotfiles/custom/tools
