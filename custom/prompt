@@ -1,0 +1,23 @@
+# Sourced after oh-my-zsh, so this augments the theme rather than replacing it.
+# The alanpeabody theme already shows git branch/status in RPROMPT.
+
+autoload -U add-zsh-hook
+
+# Show current kube context/namespace in the right prompt.
+# ponytail: shells out to kubectl on every prompt (~50ms); swap for kube-ps1 if it drags.
+_k8s_context() {
+  local ctx
+  ctx=$(kubectl config current-context 2>/dev/null) || return
+  local ns
+  ns=$(kubectl config view --minify --output 'jsonpath={..namespace}' 2>/dev/null)
+  echo " [k8s:${ctx}${ns:+/$ns}]"
+}
+
+if [[ $commands[kubectl] ]]; then
+  setopt PROMPT_SUBST
+  RPROMPT="%F{magenta}\$(_k8s_context)%f${RPROMPT}"
+fi
+
+# Set the terminal tab title to the full path.
+_set_tab_title() { print -Pn "\e]2;${PWD}\a" }
+add-zsh-hook precmd _set_tab_title

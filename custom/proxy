@@ -1,0 +1,4 @@
+# Corporate proxy & CA
+export http_proxy="http://proxy.internal.example:80/"
+export https_proxy="http://proxy.internal.example:80/"
+export no_proxy=".internal.example,localhost,127.0.0.1,.eks.amazonaws.com"
