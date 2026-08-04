@@ -1,4 +1,8 @@
-# Corporate proxy & CA
-export http_proxy="http://proxy.internal.example:80/"
-export https_proxy="http://proxy.internal.example:80/"
-export no_proxy=".internal.example,localhost,127.0.0.1,.eks.amazonaws.com"
+# Proxy settings are machine/network-specific — not tracked in git.
+# Create ~/.config/dotfiles/proxy.local with your proxy env vars if needed, e.g.:
+#
+#   export http_proxy="http://proxy.example.com:80/"
+#   export https_proxy="$http_proxy"
+#   export no_proxy="localhost,127.0.0.1"
+#
+[ -f "$HOME/.config/dotfiles/proxy.local" ] && source "$HOME/.config/dotfiles/proxy.local"
