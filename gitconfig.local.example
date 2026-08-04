@@ -1,0 +1,8 @@
+# Copy to ~/.gitconfig.local (outside this repo, not stowed, not tracked)
+# and fill in your identity. .gitconfig includes it automatically.
+#
+#   cp gitconfig.local.example ~/.gitconfig.local
+#
+[user]
+    name = Your Name
+    email = you@example.com

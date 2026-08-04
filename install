@@ -1,3 +1,11 @@
 #!/bin/bash
+set -euo pipefail
 
-stow -R -v -t ~ -d ~/dotfiles/home .
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if ! command -v stow &>/dev/null; then
+  echo "error: GNU stow is not installed (brew install stow)" >&2
+  exit 1
+fi
+
+stow -R -v -t ~ -d "$DOTFILES_DIR/home" .

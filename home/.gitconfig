@@ -1,11 +1,12 @@
-[user]
-    email = user.email
-    name = user.name
 [pull]
     ff = only
 [rerere]
     enabled = true
+[include]
+    path = ~/.gitconfig.local
 [alias]
+    # Rewrites author/committer identity in history. Uses the deprecated
+    # `git filter-branch`; prefer `git-filter-repo` for new history rewrites.
     change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
 [protocol "file"]
     allow = always
