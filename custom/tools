@@ -11,6 +11,9 @@ if command -v bat &>/dev/null; then
 fi
 
 if command -v zoxide &>/dev/null; then
+  # Claude Code's shell snapshot restores zoxide's functions but not chpwd_functions,
+  # so the doctor false-positives on every `z`. Disable it; hook is registered fine in real shells.
+  export _ZO_DOCTOR=0
   eval "$(zoxide init zsh)"
   alias cd='z'
 fi

@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "bottom_dock_layout": "contained",
+  "buffer_line_height": "standard",
   "use_system_window_tabs": false,
   "diagnostics": {
     "button": true
@@ -17,6 +20,7 @@
   "agent_ui_font_size": 15.0,
   "ui_font_weight": 400.0,
   "tabs": {
+    "close_position": "right",
     "git_status": false
   },
   "title_bar": {
@@ -25,7 +29,7 @@
     "show_project_items": true,
     "show_worktree_name": true,
     "show_branch_name": true,
-    "show_branch_status_icon": false,
+    "show_branch_status_icon": true,
     "show_user_menu": true,
     "show_user_picture": false,
     "show_sign_in": true
@@ -43,20 +47,20 @@
   "project_panel": {
     "git_status_indicator": true,
     "file_icons": true,
-    "dock": "left"
+    "dock": "right"
   },
   "outline_panel": {
-    "button": false,
-    "dock": "left"
+    "button": true,
+    "dock": "right"
   },
   "collaboration_panel": {
     "button": false,
-    "dock": "left"
   },
   "edit_predictions": {
     "provider": "copilot"
   },
   "agent": {
+    "limit_content_width": true,
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-5.3-codex",
@@ -67,7 +71,7 @@
     "show_turn_stats": false,
     "single_file_review": true,
     "button": false,
-    "dock": "right",
+    "dock": "left",
     "favorite_models": [],
     "model_parameters": []
   },
@@ -79,7 +83,7 @@
     "dock": "left",
     "tree_view": true
   },
-  "diff_view_style": "split",
+  "diff_view_style": "unified",
   "session": {
     "trust_all_worktrees": true
   },
@@ -118,16 +122,15 @@
       "type": "registry"
     }
   },
-  "icon_theme": {
-    "mode": "dark",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)"
+  // Automatic extension installation
+  "auto_install_extensions": {
+    "dart": true,
+    "git-firefly": true,
+    "ruff": true,
+    "toml": true
   },
-  "ui_font_size": 15.0,
-  "buffer_font_size": 14.0,
-  "theme": {
-    "mode": "dark",
-    "light": "Ayu Light",
-    "dark": "Ayu Dark",
-  },
+  "icon_theme": "Catppuccin Frappé",
+  "ui_font_size": 16,
+  "buffer_font_size": 13,
+  "theme": "One Dark",
 }
