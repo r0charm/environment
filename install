@@ -9,8 +9,3 @@ if ! command -v stow &>/dev/null; then
 fi
 
 stow -R -v -t ~ -d "$DOTFILES_DIR/home" .
-
-# Cursor (stored in .config/cursor, symlinked to Mac app path)
-CURSOR_SETTINGS_DIR="$HOME/Library/Application Support/Cursor/User"
-mkdir -p "$CURSOR_SETTINGS_DIR"
-ln -sf "$HOME/.config/cursor/settings.json" "$CURSOR_SETTINGS_DIR/settings.json"
