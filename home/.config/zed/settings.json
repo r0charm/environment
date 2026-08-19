@@ -94,8 +94,14 @@
     "show_tab_bar_buttons": false
   },
   "search": {
-    "include_ignored": true
+    "include_ignored": false
   },
+  "file_scan_exclusions": [
+    "**/node_modules",
+    "**/.angular",
+    "**/chunk-*.js",
+    "**/chunk-*.mjs"
+  ],
   "use_smartcase_search": true,
   "minimap": {
     "show": "never"
