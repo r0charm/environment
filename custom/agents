@@ -1,0 +1,8 @@
+path=("$HOME/.opencode/bin" $path)
+
+# pantera-skills is registered by opencode's own plugin, and reachable again via
+# ~/.claude/skills, which Claude Code needs. Skipping that scan leaves one source.
+export OPENCODE_DISABLE_CLAUDE_CODE_SKILLS=1
+
+alias oc="opencode"
+alias cc="claude"

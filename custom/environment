@@ -2,6 +2,9 @@ export EDITOR=nvim
 export VISUAL=nvim
 export COLORTERM=truecolor
 
+# aws sso login: use /usr/bin/open instead of broken MacOSXOSAScript webbrowser backend
+export BROWSER=open
+
 # XDG base dirs
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache

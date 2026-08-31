@@ -116,6 +116,4 @@ source ~/dotfiles/custom/git
 source ~/dotfiles/custom/nvm
 source ~/dotfiles/custom/prompt
 source ~/dotfiles/custom/tools
-
-# aws sso login: use /usr/bin/open instead of broken MacOSXOSAScript webbrowser backend
-export BROWSER=open
+source ~/dotfiles/custom/agents

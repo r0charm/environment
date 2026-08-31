@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "proxy": "",
   "disable_ai": true,
   "bottom_dock_layout": "contained",
   "buffer_line_height": "standard",
@@ -67,10 +68,10 @@
       "enable_thinking": true,
       "effort": "high"
     },
-    "flexible": false,
+    "flexible": true,
     "show_turn_stats": false,
     "single_file_review": true,
-    "button": false,
+    "button": true,
     "dock": "left",
     "favorite_models": [],
     "model_parameters": []
@@ -83,7 +84,7 @@
     "dock": "left",
     "tree_view": true
   },
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "session": {
     "trust_all_worktrees": true
   },
