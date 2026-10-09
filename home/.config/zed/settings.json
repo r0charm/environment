@@ -7,6 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
   "proxy": "",
   "disable_ai": true,
   "bottom_dock_layout": "contained",
@@ -138,6 +156,6 @@
   },
   "icon_theme": "Catppuccin Frappé",
   "ui_font_size": 16,
-  "buffer_font_size": 13,
+  "buffer_font_size": 13.0,
   "theme": "One Dark",
 }

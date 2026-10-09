@@ -6,3 +6,5 @@ export OPENCODE_DISABLE_CLAUDE_CODE_SKILLS=1
 
 alias oc="opencode"
 alias cc="claude"
+
+export PI_CODING_AGENT_DIR="$HOME/.config/pi/agent"
